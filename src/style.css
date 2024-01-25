@@ -1,0 +1,148 @@
+li:hover{
+    cursor: pointer;
+    transform: translate(-0rem, -0rem);
+    box-shadow: 0rem 0rem black;
+}
+
+*{
+    font-family: 'Roboto Mono', monospace;
+}
+
+li{
+    font-size: 24px;
+    width: 464px;
+    height: 30px;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem black;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+    padding-left: 2px;
+    list-style-type: none;
+    transition: .1s;
+    background-color: white;
+}
+
+#results{
+    margin-left: -26px;
+}
+
+#search-bar{
+    width: 364px;
+    height: 50px;
+    font-size: 26px;
+    border: 1px solid black;
+    border-radius: 4px;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem black;
+    transition: .1s;
+    background-color: rgb(211, 211, 211);;
+}
+
+#search-bar:focus{
+    transform: translate(-0rem, -0rem);
+    box-shadow: 0rem 0rem black;
+}
+
+
+.guessed{
+    width: 90%;
+    display:flex;
+    font-size: 20px;
+    height: 64px;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem black;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 10px;
+    padding-left: 2px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+
+.guessed-name{
+    width: 290px;
+}
+
+.guessed-age{
+    width: 50px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.guessed-voivodeship{
+    width: 20%;
+    text-align: center;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.guessed-month{
+    width: 20%;
+    text-align: center;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+body{
+    background-color: grey;
+}
+
+#main-app{
+    width: 800px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+}
+
+#search{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+}
+
+#guesses-left{
+    font-size: 40px;
+    font-weight: 600;
+    color: black;
+}
+
+#main-container{
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(201, 201, 201);
+    border: 1px solid black;
+    border-radius: 4px;
+    transform: translate(-0.25rem, -0.25rem);
+    box-shadow: 0.25rem 0.25rem black;
+    gap: 4px;
+}
