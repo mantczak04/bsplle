@@ -4,6 +4,7 @@ import { randomPerson } from "../main";
 let mainContainer = document.getElementById('main-container') as HTMLDivElement;
 let guessesLeftContainer = document.getElementById('guesses-left') as HTMLSpanElement;
 let inputContainer = document.getElementById('search') as HTMLInputElement;
+let correctAnswerContainer = document.getElementById('correct-ans') as HTMLDivElement;
 
 
 let GUESS_AGE : number = randomPerson.age;
@@ -14,6 +15,8 @@ let GUESSES_LEFT: number = 5;
 
 let CLOSE: string = '#ffd900'
 let PERFECT: string = '#00ff00'
+
+correctAnswerContainer.innerHTML = `Poprawna odpowiedź to : ${randomPerson.name}`;
 
 function checkAge(age: number): string{
     if(age-1 === GUESS_AGE || age+1 === GUESS_AGE){
@@ -136,7 +139,6 @@ export function guessSelectedPerson(selectedPerson: PersonItem | undefined): voi
     if(selectedPerson){
         if(GUESSES_LEFT>=0)GUESSES_LEFT--;
         guessesLeftContainer.innerHTML = `Pozostało prób: ${GUESSES_LEFT}`;
-        console.log(randomPerson.name);
 
         let guessedContainer = document.createElement('div');
         let guessedName = document.createElement('div');
@@ -184,6 +186,7 @@ export function guessSelectedPerson(selectedPerson: PersonItem | undefined): voi
             alert(`Przegrałeś! Poprawna odpowiedź to ${randomPerson.name}`);
             guessedContainer.style.backgroundColor = '#d37c7c';
             inputContainer.style.visibility = 'hidden';
+            correctAnswerContainer.style.visibility = 'visible'
             return;
         }
     }

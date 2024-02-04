@@ -146,3 +146,8 @@ body{
     box-shadow: 0.25rem 0.25rem black;
     gap: 4px;
 }
+
+#correct-ans{
+    visibility: hidden;
+    font-size: 26px;
+}
